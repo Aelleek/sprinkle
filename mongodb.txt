@@ -1,0 +1,14 @@
+use sprinkle
+
+db.member.insert({"id":"leekw", "pwd":"leekw"});
+db.member.insert({"id":"leecw", "pwd":"leecw"});
+db.member.insert({"id":"parksh", "pwd":"parksh"});
+db.member.insert({"id":"kimmi", "pwd":"kimmi"});
+
+db.member.find().pretty()
+
+
+db.createUser({user:"sprinkle", pwd:"bitbitr35", roles:[{role:"dbOwner", db:"sprinkle"}]});
+
+
+mongo -u 'sprinkle' -p 'bitbitr35' --authenticationDatabase 'sprinkle'
